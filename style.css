@@ -21,31 +21,7 @@ body {
   margin: auto;
 }
 /* ---------------commonBlock1 container--------------- */
- .Block1,.Block2,.Block3,.Block4 {
-  position: absolute;
-  left: 0;
- }
- .Block1 {
-  top:34px;
- }
-.Block2{
-  top:119px;
-}
-.Block3{
-  top:527px;
-}
-.Block4{
-  top:615px;
-}
-.Block5{
-  top: 42px;
-}
-.Block6{
-  top:212px;
-}
-.Block7{
-  top:345px;
-}
+
 /* ---------------inner 1 container--------------- */
 
 /* .innerContainer1 {
@@ -102,11 +78,8 @@ body {
   left: 80px;
 }
 
-#option1,
-#option2,
-#option3,
-#option4 {
-  width: 281px;
+.option {
+  width: 251px;
   height: 45px;
   position: absolute;
   right: 24px;
@@ -126,6 +99,8 @@ body {
   color: rgba(255, 255, 255, 1);
   font-size: 27px;
   font-family: "Baumans", cursive;
+  display: flex;
+  justify-content: center;
 }
 
 /* ----------------lower container------------------ */
@@ -135,6 +110,7 @@ body {
   justify-content: space-between;
   width: 566px;
 }
+/* -----------------set alarm---------------- */
 .setAlarm {
   margin-top: 9px;
   display: flex;
@@ -156,6 +132,7 @@ body {
 }
 
 .setAlarm:hover {
+  cursor: pointer;
   background-image: linear-gradient(
     to right,
     var(--gradient4),
@@ -164,7 +141,7 @@ body {
     var(--gradient1)
   );
 }
-
+/* ----------schedule-------------- */
 .schedule {
   display: inline-block;
   width: 253px;
@@ -190,12 +167,7 @@ body {
   margin-left: 40px;
   width: 536px;
 } */
-.Block5,.Block6,.Block7{
-  margin-left: 40px;
-  width: 566px;
-  position: absolute;
-  right: 0;
-}
+
 .timer {
   width: 566px;
   margin-top: 8px;
@@ -283,11 +255,52 @@ body {
   width: 566px;
   height: 341px;
 }
+/* blocks */
+.Block1,.Block2,.Block3,.Block4 {
+  position: absolute;
 
+  left: 0;
+ }
+ .Block1 {
+  top:34px;
+ }
+.Block2{
+  top:119px;
+  width: 500px;
+}
+.Block3{
+  top:527px;
+  width: 500px;
+}
+.Block4{
+  top:615px;
+  width: 500px;
+}
+.Block5{
+  top: 42px;
+  width: 500px;
+
+}
+.Block6{
+  top:212px;
+  width: 500px;
+
+}
+.Block7{
+  top:345px;
+  width: 500px;
+
+}
+.Block5,.Block6,.Block7{
+  margin-left: 40px;
+  width: 500px;
+  position: absolute;
+  right: 0;
+}
 /*-------------------Risponsiveness-----------------  */
 /* --------------tablet------------- */
 
-@media ((max-width: 1149px)) {
+@media ((max-width: 1300px)) {
   
   body {
     height: 200vh;
@@ -299,34 +312,47 @@ body {
   }
   .Block1 {
     top:34px;
-
    }
    .Block5{
     top: 119px;
+width: 566px;
+
   }
  
   .Block6{
     top:300px;
+width: 566px;
+
   }
   .Block2{
     top:450px;
+width: 566px;
+
   }
   .Block3{
     top:885px;
+width: 566px;
+
   }
  
   .Block7{
     top:1020px;
+width: 566px;
+
   }
   .Block4{
     top:1400px;
+width: 566px;
+
   }
   
-
+  .option {
+    width: 281px;
+  }
 }
 
 /* --------------mobile------------- */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body {
     width: 100%;
   }
@@ -351,10 +377,8 @@ body {
    overflow: hidden;
    
   }
-  #option1,
-  #option2,
-  #option3,
-  #option4 {
+ 
+  .option {
     width: 38%;
   }
 
@@ -379,9 +403,7 @@ body {
   .timer {
     width: 100%;
   }
-  .timerBox1 .span1,.timerBox1 .span2{
-    
-  }
+
   .timerBox1 {
     width: 100%;
   }
