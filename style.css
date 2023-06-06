@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 :root {
   --bgcolor: #3d087b;
   --gradient1: #6e54ec;
@@ -13,32 +16,35 @@ body {
 /* ---------------main container--------------- */
 .mainContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 80%;
+  width: 90%;
   margin: auto;
+  margin-top: 30px;
 }
 /* ---------------commonBlock1 container--------------- */
 
 /* ---------------inner 1 container--------------- */
 
-/* .innerContainer1 {
-  width: 566px;
+.innerContainerOne {
+  /* width: 566px; */
+  max-width: 566px;
+  width: 49%;
   display: flex;
   flex-direction: column;
-} */
+}
 /* ---------------clock container--------------- */
 
 .clockLogo {
-  width: 203px;
+  max-width: 203px;
+  /* width: 203px; */
   height: 77px;
 }
 /* ---------------card container--------------- */
 .cardContainer {
   background-color: white;
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
   height: 363px;
   border-radius: 10px;
   margin-top: 38px;
@@ -46,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 .cardContainer hr {
   position: absolute;
@@ -66,27 +73,36 @@ body {
 .card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .card img {
   position: absolute;
-  width: 34px;
+  max-width: 34px;
+  /* width: 34px; */
   height: 34px;
   left: 25px;
+  object-fit: cover;
 }
 .card label {
-  position: absolute;
+  position: relative;
   left: 80px;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .option {
-  width: 251px;
+  /* width: 251px; */
+  width: 40%;
   height: 45px;
-  position: absolute;
+  position: relative;
   right: 24px;
 }
 /* ------------------greating------------------------- */
 .greating {
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
   height: 77px;
   background-color: rgb(255, 255, 255, 0.23);
   border-radius: 10px;
@@ -108,8 +124,10 @@ body {
   display: flex;
   margin-top: 11px;
   justify-content: space-between;
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
 }
+
 /* -----------------set alarm---------------- */
 .setAlarm {
   margin-top: 9px;
@@ -122,13 +140,15 @@ body {
     var(--gradient3),
     var(--gradient4)
   );
-  width: 299px;
+  width: 45%;
+  /* width: 299px; */
   height: 50px;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
   font-size: 24px;
+  text-align: center;
 }
 
 .setAlarm:hover {
@@ -144,7 +164,8 @@ body {
 /* ----------schedule-------------- */
 .schedule {
   display: inline-block;
-  width: 253px;
+  width: 51%;
+  /* width: 253px; */
   height: 117px;
   background-color: rgba(255, 255, 255, 0.23);
   border-radius: 10px;
@@ -152,6 +173,7 @@ body {
   color: #ffffff;
   font-family: sans-serif;
   padding: 0;
+  overflow-x: auto;
 }
 
 .schedule span {
@@ -163,23 +185,29 @@ body {
 }
 
 /* ----------------inner container 2------------------ */
-/* .innerContainer2 {
+.innerContainerTwo {
+  max-width: 566px;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
   margin-left: 40px;
-  width: 536px;
-} */
+}
 
 .timer {
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
   margin-top: 8px;
   height: 155px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .timerBox1 {
   position: absolute;
   top: 0px;
   z-index: 3;
-  width: 566px;
+  /* width: 566px; */
+  width: 100%;
   height: 130px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 2);
@@ -193,7 +221,8 @@ body {
 
 .timerBox1 .span1 {
   background-image: url("./images/timeLine.png");
-  width: 80px;
+  max-width: 80px;
+  /* width: 80px; */
   height: 90px;
   font-size: 36px;
   display: flex;
@@ -206,7 +235,8 @@ body {
 }
 .timerBox1 .span2 {
   background-image: url("./images/AM_svg.svg");
-  width: 80px;
+  /* width: 80px; */
+  max-width: 80px;
   height: 90px;
   font-size: 36px;
   display: flex;
@@ -218,7 +248,8 @@ body {
   position: absolute;
   top: 13px;
   z-index: 2;
-  width: 416px;
+  /* width: 416px; */
+  width: 73%;
   height: 130px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.71);
@@ -227,14 +258,16 @@ body {
   position: absolute;
   top: 25px;
   z-index: 3;
-  width: 379px;
+  /* width: 379px; */
+  width: 66%;
   height: 130px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.22);
 }
 /* --------------------message---------------------- */
 .message {
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
   height: 118px;
   border: 1px solid #ededed;
   background-color: white;
@@ -242,6 +275,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  text-align: center;
 }
 .message {
   margin-top: 15px;
@@ -252,174 +286,100 @@ body {
 /* ------------------uiImages---------------------------- */
 .uiImages {
   margin-top: 15px;
-  width: 566px;
+  /* width: 566px; */
+  max-width: 566px;
   height: 341px;
+  object-fit: cover;
 }
-/* blocks */
-.Block1,.Block2,.Block3,.Block4 {
-  position: absolute;
 
-  left: 0;
- }
- .Block1 {
-  top:34px;
- }
-.Block2{
-  top:119px;
-  width: 500px;
-}
-.Block3{
-  top:527px;
-  width: 500px;
-}
-.Block4{
-  top:615px;
-  width: 500px;
-}
-.Block5{
-  top: 42px;
-  width: 500px;
-
-}
-.Block6{
-  top:212px;
-  width: 500px;
-
-}
-.Block7{
-  top:345px;
-  width: 500px;
-
-}
-.Block5,.Block6,.Block7{
-  margin-left: 40px;
-  width: 500px;
-  position: absolute;
-  right: 0;
-}
 /*-------------------Risponsiveness-----------------  */
 /* --------------tablet------------- */
 
-@media ((max-width: 1300px)) {
-  
-  body {
-    height: 200vh;
+@media ((max-width: 871px)) {
+  .card img {
+    width: 10%;
   }
+  .card label {
+    position: absolute;
+    left: 80px;
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .option {
+    /* width: 251px; */
+    width: 20%;
+    height: 45px;
+    position: absolute;
+    right: 24px;
+  }
+}
+@media ((max-width: 650px)) {
+  /* body {
+    height: 200vh;
+  } */
   .mainContainer {
     flex-direction: column;
     align-items: center;
-    width: 566px;
+    max-width: 566px;
+    position: relative;
   }
-  .Block1 {
-    top:34px;
-   }
-   .Block5{
-    top: 119px;
-width: 566px;
-
-  }
- 
-  .Block6{
-    top:300px;
-width: 566px;
-
-  }
-  .Block2{
-    top:450px;
-width: 566px;
-
-  }
-  .Block3{
-    top:885px;
-width: 566px;
-
-  }
- 
-  .Block7{
-    top:1020px;
-width: 566px;
-
-  }
-  .Block4{
-    top:1400px;
-width: 566px;
-
-  }
-  
-  .option {
-    width: 281px;
-  }
-}
-
-/* --------------mobile------------- */
-@media (max-width: 600px) {
-  body {
+  .innerContainerOne {
     width: 100%;
   }
-  .mainContainer {
-    width: 80%;
-  }
-  .innerContainer1 {
+  .innerContainerTwo {
     width: 100%;
+    margin-left: 0;
   }
-  .cardContainer {
-    width: 100%;
-  }
-  .card {
-    width: 100%;
-  }
-  .cardContainer hr {
-    display: none;
+  .card img {
+    width: 10%;
   }
   .card label {
-    width: 40%;
-    font-size: 16px;
-   overflow: hidden;
-   
-  }
- 
-  .option {
-    width: 38%;
-  }
-
-  .greating {
-    width: 100%;
-  }
-
-  .lowerContainer {
-    width: 100%;
-  }
-  .schedule{
-    overflow-y: scroll;
-
-  }
-  .schedule span {
-    font-size: 10px;
-    line-height: normal;
-  }
-  .innerContainer2 {
-    width: 100%;
-  }
-  .timer {
-    width: 100%;
-  }
-
-  .timerBox1 {
-    width: 100%;
-  }
-  .timerBox2 {
-    width: 70%;
-  }
-  .timerBox3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 50%;
+    font-size: 16px;
+    white-space: nowrap;
   }
 
-  .message {
-    width: 100%;
-    text-align: center;
+  .option {
+    /* width: 251px; */
+    width: 40%;
   }
-  .uiImages {
+  .Block1 {
+    position: absolute;
+    top: 34px;
+  }
+  .Block5 {
+    position: absolute;
+    top: 119px;
     width: 100%;
-    object-fit: cover;
+  }
+
+  .Block6 {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+  }
+  .Block2 {
+    position: absolute;
+    top: 450px;
+    width: 100%;
+  }
+  .Block3 {
+    position: absolute;
+    top: 885px;
+    width: 100%;
+  }
+
+  .Block7 {
+    position: absolute;
+    top: 1020px;
+    width: 100%;
+  }
+  .Block4 {
+    position: absolute;
+    top: 1400px;
+    width: 100%;
   }
 }

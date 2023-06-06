@@ -20,7 +20,7 @@
 <body>
     <section class="mainContainer">
         <!-- /* ---------------inner 1 container--------------- */ -->
-       
+        <div class="innerContainerOne">
             <!-- clock logo -->
 
             <img class="clockLogo Block1" src="./images/clock_logo@2x.png" alt="clock Logo">
@@ -128,7 +128,7 @@
                 </div>
                 <hr class="hr3">
                 <!-- card 4 Set night time -->
-                <form class="card  " name="card4" >
+                <form class="card  " name="card4">
                     <img src="./images/purpulMoon.png" alt="moon">
                     <label for="option4">Set night time</label>
                     <select name="menu4" class="option">
@@ -166,21 +166,25 @@
             </div>
             <div class="lowerContainer Block4">
                 <!-- set alarm -->
-                <div class="setAlarm" onmouseover="partyTime(this)" onmouseout="normal(this)"  onClick="setAlarm()" >
-                <!-- <div class="setAlarm"  onClick="setAlarm()" > -->
-                   <!-- <span class="normalText">set alarm</span> 
-                   <span class="partyText">Party time!</span>  -->
-               set alarm
+                <div class="setAlarm" onmouseover="partyTime(this)" onmouseout="normal(this)" onClick="setAlarm()">
+                    <!-- <div class="setAlarm"  onClick="setAlarm()" > -->
+                    <!-- <span class="normalText">set alarm</span> 
+                <span class="partyText">Party time!</span>  -->
+                    set alarm
                 </div>
                 <!-- schedule -->
-                <div class="schedule "><span class="scheduleTime ">Wake Up Time : 10AM - 11AM</span><span class="scheduleTime">Lunch Time : 12PM -
-                        1PM</span><span class="scheduleTime ">Nap Time : 4PM - 5PM</span> <span class="scheduleTime ">Night Time : 8PM-9AM</span>
+                <div class="schedule "><span class="scheduleTime ">Wake Up Time : 10AM - 11AM</span><span
+                        class="scheduleTime">Lunch Time : 12PM -
+                        1PM</span><span class="scheduleTime ">Nap Time : 4PM - 5PM</span> <span
+                        class="scheduleTime ">Night Time : 8PM-9AM</span>
                 </div>
             </div>
-    
+
+        </div>
+
         <!-- /* ---------------inner 2 container--------------- */ -->
 
-        
+        <div class="innerContainerTwo">
             <!-- timer -->
             <div class="timer Block5">
 
@@ -199,19 +203,15 @@
             </div>
             <!-- message -->
             <div class="message Block6">
-                <p id="message" >GRAB SOME HEALTHY BREAKFAST!!!</p>
+                <p id="message">GRAB SOME HEALTHY BREAKFAST!!!</p>
             </div>
             <!-- uiImages -->
-            <img  id="uiImages" class="uiImages Block7" src="./images/Component 30 – 1.svg" alt="lorem">
-        
+            <img id="uiImages" class="uiImages Block7" src="./images/Component 30 – 1.svg" alt="lorem">
+        </div>
+
+
     </section>
     <script src="./script.js"></script>
 </body>
 
 </html>
-
-  
-
-
-
-
